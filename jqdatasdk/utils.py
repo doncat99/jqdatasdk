@@ -235,40 +235,40 @@ def get_mac_address():
     mac = uuid.UUID(int=uuid.getnode()).hex[-12:].upper()
     return '%s:%s:%s:%s:%s:%s' % (mac[0:2], mac[2:4], mac[4:6], mac[6:8],mac[8:10], mac[10:])
 
-def hashable_lru(maxsize=16):
-    def hashable_cache_internal(func):
-        cache = lru_cache(maxsize=maxsize)
-        def deserialize(value):
-            if isinstance(value, Serialized):
-                return json.loads(value.json)
-            else:
-                return value
+# def hashable_lru(maxsize=16):
+#     def hashable_cache_internal(func):
+#         cache = lru_cache(maxsize=maxsize)
+#         def deserialize(value):
+#             if isinstance(value, Serialized):
+#                 return json.loads(value.json)
+#             else:
+#                 return value
 
-        def func_with_serialized_params(*args, **kwargs):
-            _args = tuple([deserialize(arg) for arg in args])
-            _kwargs = {k: deserialize(v) for k, v in six.viewitems(kwargs)}
-            return func(*_args, **_kwargs)
+#         def func_with_serialized_params(*args, **kwargs):
+#             _args = tuple([deserialize(arg) for arg in args])
+#             _kwargs = {k: deserialize(v) for k, v in six.viewitems(kwargs)}
+#             return func(*_args, **_kwargs)
 
-        cached_func = cache(func_with_serialized_params)
+#         cached_func = cache(func_with_serialized_params)
 
-        @wraps(func)
-        def hashable_cached_func(*args, **kwargs):
-            _args = tuple([
-                Serialized(json.dumps(arg, sort_keys=True))
-                if type(arg) in (list, dict) else arg
-                for arg in args
-            ])
-            _kwargs = {
-                k: Serialized(json.dumps(v, sort_keys=True))
-                if type(v) in (list, dict) else v
-                for k, v in kwargs.items()
-            }
-            return copy.deepcopy(cached_func(*_args, **_kwargs))
-        hashable_cached_func.cache_info = cached_func.cache_info
-        hashable_cached_func.cache_clear = cached_func.cache_clear
-        return hashable_cached_func
+#         @wraps(func)
+#         def hashable_cached_func(*args, **kwargs):
+#             _args = tuple([
+#                 Serialized(json.dumps(arg, sort_keys=True))
+#                 if type(arg) in (list, dict) else arg
+#                 for arg in args
+#             ])
+#             _kwargs = {
+#                 k: Serialized(json.dumps(v, sort_keys=True))
+#                 if type(v) in (list, dict) else v
+#                 for k, v in kwargs.items()
+#             }
+#             return copy.deepcopy(cached_func(*_args, **_kwargs))
+#         hashable_cached_func.cache_info = cached_func.cache_info
+#         hashable_cached_func.cache_clear = cached_func.cache_clear
+#         return hashable_cached_func
 
-    return hashable_cache_internal
+#     return hashable_cache_internal
 
 def get_security_type(security):
     exchange = security[-4:]

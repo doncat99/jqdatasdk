@@ -1,11 +1,13 @@
 # coding=utf-8
-from .utils import assert_auth, to_date_str, hashable_lru
+from memoization import cached
+
+from .utils import assert_auth, to_date_str # , hashable_lru
 from .client import JQDataClient
 import sys
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_001(enddate, index='all'):
     """
     Inputs:
@@ -22,7 +24,7 @@ def alpha_001(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_002(enddate, index='all'):
     """
     Inputs:
@@ -39,7 +41,7 @@ def alpha_002(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_003(enddate, index='all'):
     """
     Inputs:
@@ -56,7 +58,7 @@ def alpha_003(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_004(enddate, index='all'):
     """
     Inputs:
@@ -73,7 +75,7 @@ def alpha_004(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_005(enddate, index='all'):
     """
     Inputs:
@@ -90,7 +92,7 @@ def alpha_005(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_006(enddate, index='all'):
     """
     Inputs:
@@ -107,7 +109,7 @@ def alpha_006(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_007(enddate, index='all'):
     """
     Inputs:
@@ -124,7 +126,7 @@ def alpha_007(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_008(enddate, index='all'):
     """
     Inputs:
@@ -141,7 +143,7 @@ def alpha_008(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_009(enddate, index='all'):
     """
     Inputs:
@@ -158,7 +160,7 @@ def alpha_009(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_010(enddate, index='all'):
     """
     Inputs:
@@ -175,7 +177,7 @@ def alpha_010(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_011(enddate, index='all'):
     """
     Inputs:
@@ -192,7 +194,7 @@ def alpha_011(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_012(enddate, index='all'):
     """
     Inputs:
@@ -209,7 +211,7 @@ def alpha_012(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_013(enddate, index='all'):
     """
     Inputs:
@@ -226,7 +228,7 @@ def alpha_013(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_014(enddate, index='all'):
     """
     Inputs:
@@ -243,7 +245,7 @@ def alpha_014(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_015(enddate, index='all'):
     """
     Inputs:
@@ -260,7 +262,7 @@ def alpha_015(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_016(enddate, index='all'):
     """
     Inputs:
@@ -277,7 +279,7 @@ def alpha_016(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_017(enddate, index='all'):
     """
     Inputs:
@@ -294,7 +296,7 @@ def alpha_017(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_018(enddate, index='all'):
     """
     Inputs:
@@ -311,7 +313,7 @@ def alpha_018(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_019(enddate, index='all'):
     """
     Inputs:
@@ -328,7 +330,7 @@ def alpha_019(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_020(enddate, index='all'):
     """
     Inputs:
@@ -345,7 +347,7 @@ def alpha_020(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_021(enddate, index='all'):
     """
     Inputs:
@@ -362,7 +364,7 @@ def alpha_021(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_022(enddate, index='all'):
     """
     Inputs:
@@ -379,7 +381,7 @@ def alpha_022(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_023(enddate, index='all'):
     """
     Inputs:
@@ -396,7 +398,7 @@ def alpha_023(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_024(enddate, index='all'):
     """
     Inputs:
@@ -413,7 +415,7 @@ def alpha_024(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_025(enddate, index='all'):
     """
     Inputs:
@@ -430,7 +432,7 @@ def alpha_025(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_026(enddate, index='all'):
     """
     Inputs:
@@ -447,7 +449,7 @@ def alpha_026(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_027(enddate, index='all'):
     """
     Inputs:
@@ -464,7 +466,7 @@ def alpha_027(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_028(enddate, index='all'):
     """
     Inputs:
@@ -481,7 +483,7 @@ def alpha_028(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_029(enddate, index='all'):
     """
     Inputs:
@@ -498,7 +500,7 @@ def alpha_029(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_030(enddate, index='all'):
     """
     Inputs:
@@ -515,7 +517,7 @@ def alpha_030(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_031(enddate, index='all'):
     """
     Inputs:
@@ -532,7 +534,7 @@ def alpha_031(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_032(enddate, index='all'):
     """
     Inputs:
@@ -549,7 +551,7 @@ def alpha_032(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_033(enddate, index='all'):
     """
     Inputs:
@@ -566,7 +568,7 @@ def alpha_033(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_034(enddate, index='all'):
     """
     Inputs:
@@ -583,7 +585,7 @@ def alpha_034(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_035(enddate, index='all'):
     """
     Inputs:
@@ -600,7 +602,7 @@ def alpha_035(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_036(enddate, index='all'):
     """
     Inputs:
@@ -617,7 +619,7 @@ def alpha_036(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_037(enddate, index='all'):
     """
     Inputs:
@@ -634,7 +636,7 @@ def alpha_037(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_038(enddate, index='all'):
     """
     Inputs:
@@ -651,7 +653,7 @@ def alpha_038(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_039(enddate, index='all'):
     """
     Inputs:
@@ -668,7 +670,7 @@ def alpha_039(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_040(enddate, index='all'):
     """
     Inputs:
@@ -685,7 +687,7 @@ def alpha_040(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_041(enddate, index='all'):
     """
     Inputs:
@@ -702,7 +704,7 @@ def alpha_041(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_042(enddate, index='all'):
     """
     Inputs:
@@ -719,7 +721,7 @@ def alpha_042(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_043(enddate, index='all'):
     """
     Inputs:
@@ -736,7 +738,7 @@ def alpha_043(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_044(enddate, index='all'):
     """
     Inputs:
@@ -753,7 +755,7 @@ def alpha_044(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_045(enddate, index='all'):
     """
     Inputs:
@@ -770,7 +772,7 @@ def alpha_045(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_046(enddate, index='all'):
     """
     Inputs:
@@ -787,7 +789,7 @@ def alpha_046(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_047(enddate, index='all'):
     """
     Inputs:
@@ -804,7 +806,7 @@ def alpha_047(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_048(enddate, index='all'):
     """
     未实现
@@ -815,7 +817,7 @@ def alpha_048(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_049(enddate, index='all'):
     """
     Inputs:
@@ -832,7 +834,7 @@ def alpha_049(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_050(enddate, index='all'):
     """
     Inputs:
@@ -849,7 +851,7 @@ def alpha_050(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_051(enddate, index='all'):
     """
     Inputs:
@@ -866,7 +868,7 @@ def alpha_051(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_052(enddate, index='all'):
     """
     Inputs:
@@ -883,7 +885,7 @@ def alpha_052(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_053(enddate, index='all'):
     """
     Inputs:
@@ -900,7 +902,7 @@ def alpha_053(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_054(enddate, index='all'):
     """
     Inputs:
@@ -917,7 +919,7 @@ def alpha_054(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_055(enddate, index='all'):
     """
     Inputs:
@@ -934,7 +936,7 @@ def alpha_055(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_056(enddate, index='all'):
     """
     Inputs:
@@ -951,7 +953,7 @@ def alpha_056(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_057(enddate, index='all'):
     """
     Inputs:
@@ -968,7 +970,7 @@ def alpha_057(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_058(enddate, index='all'):
     """
     未实现
@@ -979,7 +981,7 @@ def alpha_058(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_059(enddate, index='all'):
     """
     未实现
@@ -990,7 +992,7 @@ def alpha_059(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_060(enddate, index='all'):
     """
     Inputs:
@@ -1007,7 +1009,7 @@ def alpha_060(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_061(enddate, index='all'):
     """
     Inputs:
@@ -1024,7 +1026,7 @@ def alpha_061(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_062(enddate, index='all'):
     """
     Inputs:
@@ -1041,7 +1043,7 @@ def alpha_062(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_063(enddate, index='all'):
     """
     未实现
@@ -1052,7 +1054,7 @@ def alpha_063(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_064(enddate, index='all'):
     """
     Inputs:
@@ -1069,7 +1071,7 @@ def alpha_064(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_065(enddate, index='all'):
     """
     Inputs:
@@ -1086,7 +1088,7 @@ def alpha_065(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_066(enddate, index='all'):
     """
     Inputs:
@@ -1103,7 +1105,7 @@ def alpha_066(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_067(enddate, index='all'):
     """
     未实现
@@ -1114,7 +1116,7 @@ def alpha_067(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_068(enddate, index='all'):
     """
     Inputs:
@@ -1131,7 +1133,7 @@ def alpha_068(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_069(enddate, index='all'):
     """
     未实现
@@ -1142,7 +1144,7 @@ def alpha_069(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_070(enddate, index='all'):
     """
     未实现
@@ -1153,7 +1155,7 @@ def alpha_070(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_071(enddate, index='all'):
     """
     Inputs:
@@ -1170,7 +1172,7 @@ def alpha_071(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_072(enddate, index='all'):
     """
     Inputs:
@@ -1187,7 +1189,7 @@ def alpha_072(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_073(enddate, index='all'):
     """
     Inputs:
@@ -1204,7 +1206,7 @@ def alpha_073(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_074(enddate, index='all'):
     """
     Inputs:
@@ -1221,7 +1223,7 @@ def alpha_074(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_075(enddate, index='all'):
     """
     Inputs:
@@ -1238,7 +1240,7 @@ def alpha_075(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_076(enddate, index='all'):
     """
     未实现
@@ -1249,7 +1251,7 @@ def alpha_076(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_077(enddate, index='all'):
     """
     Inputs:
@@ -1266,7 +1268,7 @@ def alpha_077(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_078(enddate, index='all'):
     """
     Inputs:
@@ -1283,7 +1285,7 @@ def alpha_078(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_079(enddate, index='all'):
     """
     未实现
@@ -1294,7 +1296,7 @@ def alpha_079(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_080(enddate, index='all'):
     """
     未实现
@@ -1305,7 +1307,7 @@ def alpha_080(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_081(enddate, index='all'):
     """
     未实现
@@ -1316,7 +1318,7 @@ def alpha_081(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_082(enddate, index='all'):
     """
     未实现
@@ -1327,7 +1329,7 @@ def alpha_082(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_083(enddate, index='all'):
     """
     Inputs:
@@ -1344,7 +1346,7 @@ def alpha_083(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_084(enddate, index='all'):
     """
     Inputs:
@@ -1361,7 +1363,7 @@ def alpha_084(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_085(enddate, index='all'):
     """
     Inputs:
@@ -1378,7 +1380,7 @@ def alpha_085(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_086(enddate, index='all'):
     """
     Inputs:
@@ -1395,7 +1397,7 @@ def alpha_086(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_087(enddate, index='all'):
     """
     未实现
@@ -1406,7 +1408,7 @@ def alpha_087(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_088(enddate, index='all'):
     """
     Inputs:
@@ -1423,7 +1425,7 @@ def alpha_088(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_089(enddate, index='all'):
     """
     未实现
@@ -1435,7 +1437,7 @@ def alpha_089(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_090(enddate, index='all'):
     """
     未实现
@@ -1446,7 +1448,7 @@ def alpha_090(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_091(enddate, index='all'):
     """
     未实现
@@ -1457,7 +1459,7 @@ def alpha_091(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_092(enddate, index='all'):
     """
     Inputs:
@@ -1474,7 +1476,7 @@ def alpha_092(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_093(enddate, index='all'):
     """
     未实现
@@ -1485,7 +1487,7 @@ def alpha_093(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_094(enddate, index='all'):
     """
     Inputs:
@@ -1502,7 +1504,7 @@ def alpha_094(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_095(enddate, index='all'):
     """
     Inputs:
@@ -1519,7 +1521,7 @@ def alpha_095(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_096(enddate, index='all'):
     """
     Inputs:
@@ -1536,7 +1538,7 @@ def alpha_096(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_097(enddate, index='all'):
     """
     未实现
@@ -1547,7 +1549,7 @@ def alpha_097(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_098(enddate, index='all'):
     """
     Inputs:
@@ -1563,7 +1565,7 @@ def alpha_098(enddate, index='all'):
     return JQDataClient.instance().get_alpha_101(**locals())
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_099(enddate, index='all'):
     """
     Inputs:
@@ -1580,7 +1582,7 @@ def alpha_099(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_100(enddate, index='all'):
     """
     未实现
@@ -1591,7 +1593,7 @@ def alpha_100(enddate, index='all'):
 
 
 @assert_auth
-@hashable_lru(maxsize=3)
+@cached(max_size=128)
 def alpha_101(enddate, index='all'):
     """
     Inputs:
