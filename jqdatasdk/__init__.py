@@ -14,10 +14,10 @@ from .client import JQDataClient, AnalysisDNS, is_pandas_version_25, get_pandas_
 __version__ = "1.8.1"
 
 def auth(username, password, host="39.107.190.114", port=7000):
-    JQDataClient.set_auth_params(host=host, port=port, username=username, password=password, version=__version__)
+    return JQDataClient.set_auth_params(host=host, port=port, username=username, password=password, version=__version__)
 
 def auth_by_token(token, host="39.107.190.114", port=7000):
-    JQDataClient.set_auth_params(host=host, port=port, token=token)
+    return JQDataClient.set_auth_params(host=host, port=port, token=token)
 
 def logout():
     JQDataClient.instance().logout()

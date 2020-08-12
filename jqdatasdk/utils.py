@@ -299,10 +299,11 @@ def get_security_type(security):
             return "future"
     return 0
 
-# def is_pandas_version_25():
-#     if pd.__version__[:4] == "0.25":
-#         return True
-#     return False
+def is_pandas_version_25():
+    if pd.__version__[:4] == "0.25":
+        return True
+    return False
 
-# def get_pandas_notice():
-#     return "提示：当前环境pandas版本为0.25，get_price与get_fundamentals_continuously接口panel参数将固定为False\n注意：0.25以上版本pandas不支持panel，如使用该数据结构和相关函数请注意修改"
+def get_pandas_notice():
+    pass
+    # return "提示：当前环境pandas版本为0.25，get_price与get_fundamentals_continuously接口panel参数将固定为False\n注意：0.25以上版本pandas不支持panel，如使用该数据结构和相关函数请注意修改"
