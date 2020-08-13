@@ -6,7 +6,7 @@ import datetime
 from functools import wraps
 from collections import namedtuple
 import re
-# import pandas as pd
+import pandas as pd 
 # if six.PY2:
 #     import cPickle as pickle
 # else:
