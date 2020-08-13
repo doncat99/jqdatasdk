@@ -291,7 +291,7 @@ def get_security_type(security):
             elif code[0] == "1":
                 return "fund"
         else:
-            raise Exception("找不到标的%s" % security_code)
+            raise Exception("找不到标的%s" % security)
     else:
         if exchange in ("XSGE", "XDCE", "XZCE", "XINE", "CCFX"):
             if len(code) > 6:
